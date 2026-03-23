@@ -1,0 +1,31 @@
+{
+  "name": "real-time-dashboard-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seiftahlawi/real-time-dashboard-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/seiftahlawi/real-time-dashboard-api/issues"
+  },
+  "homepage": "https://github.com/seiftahlawi/real-time-dashboard-api#readme",
+  "dependencies": {
+    "@fastify/websocket": "^11.2.0",
+    "fastify": "^5.8.4",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^6.0.2"
+  }
+}
