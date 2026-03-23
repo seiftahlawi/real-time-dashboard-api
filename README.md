@@ -14,6 +14,15 @@ Supported tickers: `AAPL`, `TSLA`, `BTC-USD`
 
 ---
 
+## Install
+
+```bash
+cd real-time-dashboard-api
+npm install
+```
+
+---
+
 ## How to run the tests
 
 ```bash
@@ -31,9 +40,18 @@ npm run test:watch
 
 ## How to start the server
 
-There's no `npm start` script, so run it directly:
+For development (auto-restarts on file changes):
 
+```bash
+npm run dev
+```
 
+For production (runs compiled JS):
+
+```bash
+npm run build
+npm start
+```
 
 ---
 
