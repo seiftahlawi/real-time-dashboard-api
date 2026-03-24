@@ -67,6 +67,6 @@ npm start
 
 ## Bonus features implemented
 
-- WebSocket streaming with automatic listener cleanup on disconnect (no memory leaks)
 - Zod schema validation for route parameters
 - Jest unit tests for the core market service logic
+- In-memory caching for historical data (last 5 minutes per ticker)
