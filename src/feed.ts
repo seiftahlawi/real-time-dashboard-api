@@ -1,7 +1,13 @@
 import { EventEmitter } from "events";
-import { PriceUpdate, Ticker } from "./types";
+import { PriceUpdate, Ticker, TickerInfo } from "./types";
 
 const TICKERS: Ticker[] = ["AAPL", "TSLA", "BTC-USD"];
+
+const TICKER_LOGOS: Record<Ticker, string> = {
+  AAPL: "https://s3-symbol-logo.tradingview.com/apple.svg",
+  TSLA: "https://s3-symbol-logo.tradingview.com/tesla.svg",
+  "BTC-USD": "https://s3-symbol-logo.tradingview.com/crypto/XTVCBTC.svg",
+};
 const prices: Record<Ticker, number> = { AAPL: 180, TSLA: 250, "BTC-USD": 60000 };
 const emitter = new EventEmitter();
 
@@ -22,7 +28,7 @@ export const feed = {
   on: emitter.on.bind(emitter),
   off: emitter.off.bind(emitter),
 
-  getTickers: () => TICKERS,
+  getTickers: (): TickerInfo[] => TICKERS.map((ticker) => ({ ticker, logo: TICKER_LOGOS[ticker] })),
   getCurrentPrices: () => prices,
 
   getHistory: (ticker: Ticker): PriceUpdate[] =>
