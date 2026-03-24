@@ -10,7 +10,7 @@ A small backend service that pretends to be a live stock market feed. It streams
 - **GET /history/:ticker** — returns 20 simulated historical price points for a given ticker
 - **WebSocket /prices/live** — streams live price updates every second for all tickers
 
-Supported tickers: `AAPL`, `TSLA`, `BTC-USD`
+Supported tickers: `AAPL`, `TSLA`, `BTC-USD`, `XAGUSD`, `XAUUSD`, `ETHUSD`, `USDTUSD`, `USOIL`, `SPX`
 
 ---
 

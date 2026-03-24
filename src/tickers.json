@@ -1,0 +1,62 @@
+[
+  {
+    "ticker": "AAPL",
+    "label": "Apple Inc.",
+    "logo": "https://s3-symbol-logo.tradingview.com/apple.svg",
+    "initialPrice": 180
+  },
+  {
+    "ticker": "TSLA",
+    "label": "Tesla Inc.",
+    "logo": "https://s3-symbol-logo.tradingview.com/tesla.svg",
+    "initialPrice": 250
+  },
+  {
+    "ticker": "BTC-USD",
+    "label": "Bitcoin",
+    "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCBTC.svg",
+    "initialPrice": 60000
+  },
+  {
+    "ticker": "XAGUSD",
+    "label": "Silver",
+    "logo": "https://s3-symbol-logo.tradingview.com/metal/silver--big.svg",
+    "initialPrice": 69
+  },
+  {
+    "ticker": "XAUUSD",
+    "label": "Gold",
+    "logo": "https://s3-symbol-logo.tradingview.com/metal/gold--big.svg",
+    "initialPrice": 3300
+  },
+  {
+    "ticker": "ETHUSD",
+    "label": "Ethereum",
+    "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCETH.svg",
+    "initialPrice": 2000
+  },
+  {
+    "ticker": "USDTUSD",
+    "label": "Tether",
+    "logo": "https://s3-symbol-logo.tradingview.com/crypto/XTVCUSDT.svg",
+    "initialPrice": 1
+  },
+  {
+    "ticker": "USOIL",
+    "label": "Crude Oil",
+    "logo": "https://s3-symbol-logo.tradingview.com/crude-oil.svg",
+    "initialPrice": 75
+  },
+  {
+    "ticker": "SPX",
+    "label": "S&P 500",
+    "logo": "https://s3-symbol-logo.tradingview.com/indices/s-and-p-500.svg",
+    "initialPrice": 5500
+  },
+  {
+    "ticker": "NASDAQ-NVDA",
+    "label": "NVIDIA Corp.",
+    "logo": "https://s3-symbol-logo.tradingview.com/nvidia.svg",
+    "initialPrice": 900
+  }
+]

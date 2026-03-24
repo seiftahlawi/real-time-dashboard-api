@@ -3,7 +3,7 @@ import { z } from "zod";
 import { feed } from "../../feed";
 
 const tickerSchema = z.object({
-  ticker: z.enum(["AAPL", "TSLA", "BTC-USD"]),
+  ticker: z.enum(["AAPL", "TSLA", "BTC-USD", "XAGUSD", "XAUUSD", "ETHUSD", "USDTUSD", "USOIL", "SPX", "NASDAQ-NVDA"]),
 });
 
 

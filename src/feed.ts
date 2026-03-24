@@ -1,14 +1,13 @@
 import { EventEmitter } from "events";
-import { PriceUpdate, Ticker, TickerInfo } from "./types";
+import { PriceUpdate, TickerInfo } from "./types";
+import tickerData from "./tickers.json";
 
-const TICKERS: Ticker[] = ["AAPL", "TSLA", "BTC-USD"];
+const TICKERS = tickerData.map((t) => t.ticker);
 
-const TICKER_LOGOS: Record<Ticker, string> = {
-  AAPL: "https://s3-symbol-logo.tradingview.com/apple.svg",
-  TSLA: "https://s3-symbol-logo.tradingview.com/tesla.svg",
-  "BTC-USD": "https://s3-symbol-logo.tradingview.com/crypto/XTVCBTC.svg",
-};
-const prices: Record<Ticker, number> = { AAPL: 180, TSLA: 250, "BTC-USD": 60000 };
+const prices: Record<string, number> = Object.fromEntries(
+  tickerData.map((t) => [t.ticker, t.initialPrice])
+);
+
 const emitter = new EventEmitter();
 
 export const feed = {
@@ -28,10 +27,16 @@ export const feed = {
   on: emitter.on.bind(emitter),
   off: emitter.off.bind(emitter),
 
-  getTickers: (): TickerInfo[] => TICKERS.map((ticker) => ({ ticker, logo: TICKER_LOGOS[ticker] })),
+  getTickers: (): TickerInfo[] =>
+    tickerData.map((t) => ({
+      ticker: t.ticker,
+      label: t.label,
+      logo: t.logo,
+    })),
+
   getCurrentPrices: () => prices,
 
-  getHistory: (ticker: Ticker): PriceUpdate[] =>
+  getHistory: (ticker: string): PriceUpdate[] =>
     Array.from({ length: 20 }, (_, i) => ({
       ticker,
       price: Number((prices[ticker] + (Math.random() - 0.5) * 10).toFixed(2)),
